@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="com.nothing.ketchum.permission.ENABLE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="DVD Bounce"
+        android:theme="@style/Theme.Bounce">
+
+        <meta-data
+            android:name="NothingKey"
+            android:value="test" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".BounceService"
+            android:exported="true"
+            android:foregroundServiceType="specialUse">
+            <intent-filter>
+                <action android:name="com.nothing.glyph.TOY" />
+            </intent-filter>
+            
+            <meta-data android:name="com.nothing.glyph.toy.name" android:value="DVD Bounce" />
+            <meta-data android:name="com.nothing.glyph.toy.image" android:resource="@drawable/toy_preview" />
+            <meta-data android:name="com.nothing.glyph.toy.category" android:value="GAME" />
+        </service>
+
+    </application>
+</manifest>

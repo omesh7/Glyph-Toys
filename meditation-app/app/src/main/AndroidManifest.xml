@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="com.nothing.ketchum.permission.ENABLE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="Anicca Meditation"
+        android:theme="@style/Theme.Anicca">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".AniccaService"
+            android:exported="true"
+            android:permission="com.nothing.ketchum.permission.ENABLE">
+            <intent-filter>
+                <action android:name="com.nothing.glyph.toy.SERVICE" />
+            </intent-filter>
+            
+            <meta-data android:name="com.nothing.glyph.toy.name" android:value="Anicca Meditation" />
+            <meta-data android:name="com.nothing.glyph.toy.preview" android:resource="@drawable/toy_preview" />
+            <meta-data android:name="com.nothing.glyph.toy.category" android:value="GAME" />
+            <meta-data android:name="com.nothing.glyph.toy.support_devices" android:value="25111" />
+            <meta-data android:name="com.nothing.glyph.toy.aod_support" android:value="1" />
+        </service>
+
+    </application>
+</manifest>
