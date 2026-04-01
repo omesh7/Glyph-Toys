@@ -11,32 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.05"
         android:text="Anicca"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:letterSpacing="0.05" />
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="impermanence · glyph toy"
+        android:layout_marginBottom="32dp"
+        android:text="impermanence glyph toy"
         android:textColor="#666666"
-        android:textSize="12sp"
-        android:layout_marginBottom="32dp" />
+        android:textSize="12sp" />
 
-    <!-- Simulated Matrix Preview -->
     <View
         android:id="@+id/matrixPreview"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:background="#060606"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="24dp"
+        android:background="#060606" />
 
     <TextView
         android:id="@+id/pname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Phase 1 · Settling"
+        android:text="Phase 1 - Settling"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold" />
@@ -45,20 +44,20 @@
         android:id="@+id/pdesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="Sankharas rising and passing on the surface mind"
+        android:text="Scattered sensation softens and moves toward center."
         android:textColor="#999999"
-        android:textSize="12sp"
-        android:layout_marginTop="4dp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="0 / 30 min"
         android:textColor="#444444"
-        android:textSize="11sp"
-        android:layout_marginTop="8dp" />
+        android:textSize="11sp" />
 
     <SeekBar
         android:id="@+id/progSlider"
@@ -81,42 +80,71 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Play session"
-            android:textAllCaps="false"
             android:backgroundTint="#1A1A1A"
+            android:text="Start session"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF" />
 
-        <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/resetBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#1A1A1A"
             android:text="Reset"
             android:textAllCaps="false"
-            android:backgroundTint="#1A1A1A"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Duration"
         android:textColor="#666666"
-        android:textSize="12sp"
-        android:layout_marginTop="24dp" />
+        android:textSize="12sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
 
-        <Button android:id="@+id/btn10" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10m" android:backgroundTint="#0D0D0D" />
-        <Button android:id="@+id/btn30" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30m" android:backgroundTint="#1A1A1A" />
-        <Button android:id="@+id/btn45" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="45m" android:backgroundTint="#0D0D0D" />
-        <Button android:id="@+id/btn60" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60m" android:backgroundTint="#0D0D0D" />
+        <Button
+            android:id="@+id/btn10"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0D0D0D"
+            android:text="10m" />
+
+        <Button
+            android:id="@+id/btn30"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1A1A1A"
+            android:text="30m" />
+
+        <Button
+            android:id="@+id/btn45"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0D0D0D"
+            android:text="45m" />
+
+        <Button
+            android:id="@+id/btn60"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0D0D0D"
+            android:text="60m" />
     </LinearLayout>
 
 </LinearLayout>

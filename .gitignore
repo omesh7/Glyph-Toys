@@ -1,3 +1,12 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Local assistant/editor state
+.claude/
+
+# Local Gradle state kept inside app directories
+.gradle-home/
+
+# Temporary image/reference assets
 Screenie/
-Screenie/
-../Screenie/
