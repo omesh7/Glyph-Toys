@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="250dp"
+    android:height="250dp"
+    android:viewportWidth="250"
+    android:viewportHeight="250">
+  <!-- Outer circle -->
+  <path
+      android:pathData="M125,125m-110,0a110,110 0,1 1,220 0a110,110 0,1 1,-220 0"
+      android:strokeWidth="3"
+      android:strokeColor="#FFFFFF"
+      android:fillColor="#00000000"/>
+  <!-- Grid cells (alive cells in a glider pattern) -->
+  <path android:pathData="M95,85h20v20h-20z" android:fillColor="#FFFFFF"/>
+  <path android:pathData="M115,105h20v20h-20z" android:fillColor="#FFFFFF"/>
+  <path android:pathData="M75,125h20v20h-20z" android:fillColor="#FFFFFF"/>
+  <path android:pathData="M95,125h20v20h-20z" android:fillColor="#FFFFFF"/>
+  <path android:pathData="M115,125h20v20h-20z" android:fillColor="#FFFFFF"/>
+  <!-- Faint grid lines -->
+  <path android:pathData="M75,85h80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M75,105h80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M75,125h80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M75,145h80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M75,165h80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M75,85v80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M95,85v80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M115,85v80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M135,85v80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+  <path android:pathData="M155,85v80" android:strokeWidth="0.5" android:strokeColor="#333333"/>
+</vector>

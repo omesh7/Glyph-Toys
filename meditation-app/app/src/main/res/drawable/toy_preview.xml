@@ -3,12 +3,30 @@
     android:height="250dp"
     android:viewportWidth="250"
     android:viewportHeight="250">
+  <!-- Outer circle -->
   <path
-      android:pathData="M125,125m-100,0a100,100 0,1 1,200 0a100,100 0,1 1,-200 0"
-      android:strokeWidth="2"
-      android:strokeColor="#FFFFFF"/>
+      android:pathData="M125,125m-110,0a110,110 0,1 1,220 0a110,110 0,1 1,-220 0"
+      android:strokeWidth="3"
+      android:strokeColor="#FFFFFF"
+      android:fillColor="#00000000"/>
+  <!-- Center dot (focus point) -->
   <path
-      android:pathData="M125,125m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0"
+      android:pathData="M125,125m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"
+      android:fillColor="#FFFFFF"/>
+  <!-- Radiating rings (meditation ripples) -->
+  <path
+      android:pathData="M125,125m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"
+      android:strokeWidth="1.5"
+      android:strokeColor="#AAAAAA"
+      android:fillColor="#00000000"/>
+  <path
+      android:pathData="M125,125m-55,0a55,55 0,1 1,110 0a55,55 0,1 1,-110 0"
       android:strokeWidth="1"
-      android:strokeColor="#444444"/>
+      android:strokeColor="#666666"
+      android:fillColor="#00000000"/>
+  <path
+      android:pathData="M125,125m-80,0a80,80 0,1 1,160 0a80,80 0,1 1,-160 0"
+      android:strokeWidth="0.8"
+      android:strokeColor="#444444"
+      android:fillColor="#00000000"/>
 </vector>
