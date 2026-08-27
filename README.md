@@ -11,6 +11,7 @@ Glyph-Toys/
 ├── DEVELOPER_GUIDE.md          # Hardware/SDK context, shared across all toys
 ├── dvd-bounce-app/             # Toy #1: DVD screensaver bounce
 ├── meditation-app/             # Toy #2: Anicca meditation timer
+├── shared/                     # Copy-paste template snippets for new toys (device detection, AOD lifecycle helpers)
 ├── icon-templates/             # Shared XML assets for Glyph preview icons
 └── .github/workflows/          # CI: builds + releases APKs per app
 ```
@@ -44,10 +45,12 @@ Yes — once the project skeleton exists, everything the toy actually *does* liv
 
 1. Copy an existing `*-app/` folder (pick the one closer in behavior — sensor-driven like `dvd-bounce-app`, or timer/AOD-driven like `meditation-app`) to `<name>-app/`.
 2. Rename the package (`com.nothing.glyph.toys.<name>`) in `AndroidManifest.xml`, `settings.gradle.kts`, `build.gradle.kts`, and the Kotlin package declarations.
-3. Rewrite `<Name>Service.kt` with your LED logic — this is the only file with real work in it.
-4. Update `res/values/strings.xml` (toy name/summary) and `res/drawable/toy_preview.xml` (use `icon-templates/` as a starting point).
-5. Add a `<name>-app/README.md` describing what it does (see the existing two for the expected format).
-6. Push to `main` — CI auto-builds and releases the APK (see below).
+3. Check [`shared/`](./shared/README.md) for reusable snippets (device detection, AOD lifecycle handling) before writing that logic from scratch again.
+4. Rewrite `<Name>Service.kt` with your LED logic — this is the only file with real work in it.
+5. Update `res/values/strings.xml` (toy name/summary) and `res/drawable/toy_preview.xml` (use `icon-templates/` as a starting point).
+6. Add a `<name>-app/README.md` describing what it does (see the existing two for the expected format).
+7. Push to `main` — CI auto-builds and releases the APK (see below).
+8. If you wrote something the *next* toy will also need, pull it into `shared/` rather than leaving it buried in this app.
 
 ## CI / Releases
 
