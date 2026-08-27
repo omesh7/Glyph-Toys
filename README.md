@@ -69,4 +69,4 @@ See [`DEVELOPER_GUIDE.md`](./DEVELOPER_GUIDE.md) for Glyph Matrix specs, SDK ver
 
 ## Credits
 
-Designed and developed by [Omesh](https://github.com/omesh7).
+Designed and developed by [Omesh](https://github.com/omesh7). Third-party code adapted into `shared/` is credited in [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).

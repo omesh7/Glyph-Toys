@@ -1,9 +1,9 @@
 // Copy into a toy's own package (e.g. com.nothing.glyph.toys.<name>) and
 // adjust the package declaration below.
 //
-// Original clean-room implementation for this repo, informed by the
-// device-detection approach used in the community's Nothing-Developer-Programme
-// / GlyphMarquee toy (see DEVELOPER_GUIDE.md "Community Reference").
+// Ported from bluehomewu/GlyphMarquee's device-detection logic in
+// MarqueeService.onServiceConnected (https://github.com/bluehomewu/GlyphMarquee).
+// Credit: bluehomewu. See DEVELOPER_GUIDE.md "Community Reference" for context.
 package com.nothing.glyph.toys.shared
 
 import com.nothing.ketchum.Common

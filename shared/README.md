@@ -15,7 +15,7 @@ Copy-paste template snippets for new toys, not a compiled module. Each `*-app/` 
 | [`GlyphDeviceUtils.kt`](./GlyphDeviceUtils.kt) | Detects the running device (`Common.getDeviceMatrixLength()`, `Glyph.DEVICE_*`) instead of hardcoding `DEVICE_25111p` — only needed once a toy targets more than Phone (4a) Pro. |
 | [`AodLifecycleGuard.kt`](./AodLifecycleGuard.kt) | Dedupes repeated `GlyphToy.EVENT_AOD` events, handles the fact that `onUnbind` isn't reliably called on screen wake, and delays LED shutdown to avoid flicker during AOD transitions. |
 
-These are original implementations written for this repo — see [`DEVELOPER_GUIDE.md`](../DEVELOPER_GUIDE.md#-community-reference-nothing-developer-programme--glyphmarquee) for the community project the underlying patterns were learned from (not copied — it ships with no LICENSE file, so we don't vendor its code, only the technique).
+Ported from the community — see [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md) for attribution and [`DEVELOPER_GUIDE.md`](../DEVELOPER_GUIDE.md#-community-reference-nothing-developer-programme--glyphmarquee) for the source project and context.
 
 ## Adding to this folder
 
