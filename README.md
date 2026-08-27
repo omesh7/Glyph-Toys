@@ -62,7 +62,7 @@ Yes — once the project skeleton exists, everything the toy actually *does* liv
 
 ## Hardware & SDK reference
 
-See [`DEVELOPER_GUIDE.md`](./DEVELOPER_GUIDE.md) for Glyph Matrix specs, SDK version, and the service/manifest contract every toy must follow — keep it updated when SDK/device details change, since every app here depends on it.
+See [`DEVELOPER_GUIDE.md`](./DEVELOPER_GUIDE.md) for Glyph Matrix specs, SDK version, and the service/manifest contract every toy must follow — keep it updated when SDK/device details change, since every app here depends on it. It also tracks patterns and gotchas pulled from the wider Nothing Glyph Toy community (multi-device detection, AOD lifecycle quirks, newer SDK rendering APIs) so we don't relearn them the hard way.
 
 ## Credits
 
