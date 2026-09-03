@@ -6,7 +6,11 @@ plugins {
 
 android {
     namespace = "dev.omesh.glyphtoys"
-    compileSdk = 36
+
+    // 37, not 36: androidx core 1.19 / Compose 1.12 / lifecycle 2.11 all refuse to be consumed
+    // below it. targetSdk stays at 36, which is what Play requires — compiling against newer
+    // APIs is independent of opting in to newer runtime behaviour.
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "dev.omesh.glyphtoys"

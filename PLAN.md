@@ -142,9 +142,13 @@ Deferred to Phone (3): games, anything using `EVENT_ACTION_*` / `EVENT_CHANGE`.
 
 ## 8. Stack (verified current, Sept 2026)
 
-Kotlin 2.3.20 · AGP 9.3.0 · Gradle 9.7.1 · Compose BOM 2026.08.00 · material3 1.4.0
+Kotlin 2.3.20 · AGP 9.4.0 · Gradle 9.7.1 · Compose BOM 2026.08.00 · material3 1.4.0
 core-ktx 1.19.0 · lifecycle 2.11.0 · activity-compose 1.13.0 · datastore 1.2.1 · Room 2.8.4
-compileSdk/targetSdk **36** (Play minimum since Aug 31 2026) · minSdk 34 · Hilt · Play Billing 9.1.0
+compileSdk **37**, targetSdk **36** (Play minimum since Aug 31 2026) · minSdk 34 · Play Billing 9.1.0
+
+AGP 9.1+ and compileSdk 37 are **not optional**: androidx core 1.19, Compose 1.12 and lifecycle
+2.11 all publish AAR metadata that refuses consumption below them. An AGP 8.x build fails at
+`CheckAarMetadata`, before compiling a line. targetSdk is independent and stays at 36.
 
 M3 Expressive is still `1.5.0-alpha27` — do not build the UI on it.
 
