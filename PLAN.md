@@ -150,6 +150,14 @@ AGP 9.1+ and compileSdk 37 are **not optional**: androidx core 1.19, Compose 1.1
 2.11 all publish AAR metadata that refuses consumption below them. An AGP 8.x build fails at
 `CheckAarMetadata`, before compiling a line. targetSdk is independent and stays at 36.
 
+AGP 9 applies Kotlin itself — do not also apply `org.jetbrains.kotlin.android`, it hard-fails.
+The Compose compiler plugin must match the KGP version AGP bundles (read its POM; 9.4.0 → 2.2.10).
+
+**Compose is not in the build yet.** The app currently has zero androidx dependencies: the toys
+are framework classes and the drawing core is pure Kotlin, so the debug APK is 2.5MB instead of
+30MB. Compose comes back when the gallery below is real and earns it — a stub screen of three
+labels did not.
+
 M3 Expressive is still `1.5.0-alpha27` — do not build the UI on it.
 
 **Fonts:** Ndot and NType 82 are Colophon Foundry, licensed to Nothing exclusively — we cannot ship
