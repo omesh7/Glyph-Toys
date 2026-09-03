@@ -1,50 +1,15 @@
-# OS/editor noise
-.DS_Store
-Thumbs.db
-*.swp
-*~
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Android
+*.apk
+*.aab
+*.keystore
+*.jks
 
 # IDE
 .idea/
 *.iml
-.vscode/
-
-# Local assistant/editor state
-.claude/
-
-# Android build artifacts
-build/
-*/build/
-**/build/
-.gradle/
-**/.gradle/
-local.properties
-
-# APK / AAB / signing
-*.apk
-*.aab
-*.ap_
-*.jks
-*.keystore
-
-# Compiled
-*.dex
-*.class
-bin/
-gen/
-out/
-
-# SDK zips (keep .aar only)
-**/*.zip
-
-# Extracted AAR temp dirs
-**/temp_aar/
-
-# Gradle home cache
-.gradle-home/
-
-# Temporary reference assets
-Screenie/
-
-# Logs
-*.log
+.DS_Store

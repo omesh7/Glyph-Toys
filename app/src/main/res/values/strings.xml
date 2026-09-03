@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Glyph Toys</string>
+
+    <string name="toy_charge_name">Charge</string>
+    <string name="toy_charge_summary">Battery level as a ring. Breathes while charging.</string>
+
+    <string name="hardware_supported">Glyph Matrix detected</string>
+    <string name="hardware_unsupported">No Glyph Matrix on this device</string>
+    <string name="hardware_unsupported_body">Glyph Toys needs a Nothing Phone (3) or Phone (4a) Pro.</string>
+    <string name="open_toy_settings">Open Glyph Toys settings</string>
+    <string name="activation_hint">Toys are switched on by you, not by this app. Open the Glyph Toys settings and enable Charge.</string>
+    <string name="toy_settings_unavailable">Couldn\'t open Glyph Toys settings. Find them under Settings &gt; Glyph Interface.</string>
+</resources>
