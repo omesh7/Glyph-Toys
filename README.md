@@ -81,4 +81,13 @@ Nothing publishes no Maven artifact.
 > **Note:** the SDK licence §2.2 prohibits commercial use without prior written permission from
 > Nothing (`GDKsupport@nothing.tech`). This repository is non-commercial pending that permission.
 
-See [PLAN.md](PLAN.md) for the research behind the design decisions.
+## Docs
+
+| | |
+|---|---|
+| [CLAUDE.md](CLAUDE.md) | how to work in this repo; the non-negotiables |
+| [docs/SDK.md](docs/SDK.md) | verified SDK reference — API, manifest, events, pitfalls |
+| [docs/RESEARCH.md](docs/RESEARCH.md) | market, competitors, licensing, monetization |
+| [PLAN.md](PLAN.md) | roadmap, decisions, open questions |
+
+They exist so the research isn't repeated. Add findings there rather than to a commit message.
