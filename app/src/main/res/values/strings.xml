@@ -5,6 +5,14 @@
     <string name="toy_charge_name">Charge</string>
     <string name="toy_charge_summary">Battery level as a ring. Breathes while charging.</string>
 
+    <string name="toy_album_name">Album Art</string>
+    <string name="toy_album_summary">Cover art of whatever is playing.</string>
+
+    <string name="grant_notification_access">Allow media access</string>
+    <string name="notification_access_hint">Album Art needs notification access to see what\'s playing. Nothing else is read.</string>
+    <string name="notification_access_granted">Media access granted.</string>
+    <string name="notification_settings_unavailable">Couldn\'t open notification access settings. Find them under Settings &gt; Apps &gt; Special app access.</string>
+
     <string name="hardware_supported">Glyph Matrix detected</string>
     <string name="hardware_unsupported">No Glyph Matrix on this device</string>
     <string name="hardware_unsupported_body">Glyph Toys needs a Nothing Phone (3) or Phone (4a) Pro.</string>

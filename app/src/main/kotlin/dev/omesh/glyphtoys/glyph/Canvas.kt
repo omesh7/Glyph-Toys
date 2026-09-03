@@ -69,6 +69,19 @@ class MatrixCanvas(val geometry: MatrixGeometry) {
         }
     }
 
+    /**
+     * Blit a full grid of perceptual intensities, one per cell — the output of [Tone.downscale].
+     * Cells with no LED behind them are dropped.
+     */
+    fun image(values: FloatArray, scale: Float = 1f) {
+        require(values.size == geometry.cellCount) {
+            "expected ${geometry.cellCount} values, got ${values.size}"
+        }
+        for (y in 0 until size) for (x in 0 until size) {
+            plot(x, y, values[geometry.index(x, y)] * scale)
+        }
+    }
+
     /** Line segment of the given [thickness], anti-aliased. */
     fun line(x0: Float, y0: Float, x1: Float, y1: Float, thickness: Float = 1f, v: Float = 1f) {
         val dx = x1 - x0

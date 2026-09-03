@@ -32,6 +32,12 @@ android {
     }
 }
 
+// Forward -DgeneratePreviews to the test JVM; without this it stops at the Gradle daemon and
+// PreviewGeneratorTest silently skips. See that test for what it regenerates.
+tasks.withType<Test>().configureEach {
+    System.getProperty("generatePreviews")?.let { systemProperty("generatePreviews", it) }
+}
+
 kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
