@@ -23,6 +23,13 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
+      # compileSdk 37 maps to platform "android-37.0" (Android now ships minor platform
+      # versions). It is newer than the runner image, so install it explicitly.
+      - name: Install Android SDK packages
+        run: |
+          yes 2>/dev/null | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;37.0.0"
+
       - name: Unit tests
         run: ./gradlew testDebugUnitTest --stacktrace
 

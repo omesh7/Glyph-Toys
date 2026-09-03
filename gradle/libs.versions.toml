@@ -1,6 +1,8 @@
 [versions]
 agp = "9.4.0"
-kotlin = "2.3.20"
+# Must match the KGP that AGP bundles (see its POM), since AGP 9 applies Kotlin itself and the
+# Compose compiler plugin has to line up with the compiler actually in use.
+kotlin = "2.2.10"
 composeBom = "2026.08.00"
 coreKtx = "1.19.0"
 lifecycle = "2.11.0"
@@ -21,9 +23,12 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-material3 = { module = "androidx.compose.material3:material3" }
 
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+# Android unit tests run on JUnit 4, so kotlin-test needs its JUnit 4 variant explicitly —
+# the plain kotlin-test artifact resolves no test framework here and `Test` won't resolve.
+junit = { module = "junit:junit", version = "4.13.2" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 
 [plugins]
+# No kotlin.android plugin: AGP 9 applies Kotlin itself and rejects it being applied twice.
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
